@@ -1,0 +1,7 @@
+Word var 
+identifier in alphabet
+identifier in alphabet
+identifier in alphabet
+identifier in alphabet
+Word const 
+End of work
