@@ -1,7 +1,9 @@
 Word var 
+Word var 
+Word var 
+Word const 
+Word var 
 identifier in alphabet
-identifier in alphabet
-identifier in alphabet
-identifier in alphabet
+Word var 
 Word const 
 End of work
