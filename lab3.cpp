@@ -34,7 +34,10 @@ int GetClassSymbol(char c) {
 }
 
 int main() {
-    char S[100];    // the line from the file
+    char S[100]; // the line from the file
+    int ST; // automats conditions
+    int CL; // class of the symbol
+    int BEG; // index of lexems beginning
 
     int M[10][12] =
     {
@@ -62,7 +65,7 @@ int main() {
 
     S[0] = '\0';
     int i = 0;
-    int ST = 0; // initial condition
+    ST = 0; // initial condition
     char outStr[] = "";
 
     while (1) 
@@ -76,6 +79,14 @@ int main() {
             }
             i = 0;
         }
+        
+        if (ST == 0) {
+	    BEG = i;
+        }
+	if (CL == 7) {
+	    BEG = i - 2;
+        }
+
 
         int CL = GetClassSymbol(S[i]);
         ST = M[ST][CL];// automats movement
@@ -87,10 +98,23 @@ int main() {
             if (ST != -4) 
             {
                 i--;
-                printf("%s\n",out[-ST - 1]);
-                fputs(out[-ST - 1], outFile);
-                puts("");
-                fprintf(outFile, "%c", '\n');
+                if (-ST - 1 != 0) 
+		 {
+       	    printf("%s\n", out[-ST - 1]);
+       	    fputs(out[-ST - 1], outFile);
+       	    puts("");
+       	    fprintf(outFile, "%c", '\n');
+                }
+                else 
+                {
+       	     for (int j = BEG; j < i; j++)
+		     {
+                        putchar(S[j]);
+                        fprintf(outFile, "%c", S[j]);
+          	     }
+		     printf("\n");
+             	     fprintf(outFile, "%c", '\n');
+                }
             }
 
             // return to the initial condition
