@@ -102,11 +102,12 @@ int main() {
 		 {
        	    printf("%s\n", out[-ST - 1]);
        	    fputs(out[-ST - 1], outFile);
-       	    puts("");
        	    fprintf(outFile, "%c", '\n');
                 }
                 else 
                 {
+                     printf("%s ", out[-ST - 1]);
+       	     fputs(out[-ST - 1], outFile);
        	     for (int j = BEG; j < i; j++)
 		     {
                         putchar(S[j]);

@@ -1,4 +1,11 @@
+identifier in alphabetco23
+Word var 
+identifier in alphabetoc123co
+identifier in alphabeto1212c
+identifier in alphabetooo
+identifier in alphabetccc
+Word const 
 Word const 
 Word var 
-vo12
+identifier in alphabetvo12
 End of work
